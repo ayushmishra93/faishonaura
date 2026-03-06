@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Riddhi Siddhi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Page Animation -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span>Riddhi</span> <span>Siddhi</span></div>
+        <div class="loader-crystal">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <button class="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="logo"><span class="logo-shubh">Riddhi</span><span class="logo-anjali"> Siddhi</span></a>
+        <a href="cart.html" class="cart-btn">
+            <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-badge">0</span>
+        </a>
+    </header>
+    <!-- Navigation drawer (hidden by default) -->
+    <aside class="nav-drawer" id="navDrawer" aria-hidden="true">
+        <nav class="drawer-nav">
+            <a href="products.html" class="drawer-link">Shop</a>
+            <a href="products.html?cat=category" class="drawer-link">By Category</a>
+            <a href="products.html?cat=meaning" class="drawer-link">By Meaning</a>
+            <a href="products.html?cat=crystals" class="drawer-link">By Crystals</a>
+            <a href="products.html?cat=color" class="drawer-link">By Color</a>
+            <a href="products.html?cat=home-decor" class="drawer-link">Home Decor</a>
+            <a href="products.html?cat=jewellery" class="drawer-link">Jewellery</a>
+            <a href="products.html?cat=gifting" class="drawer-link">Gifting</a>
+        </nav>
+    </aside>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="promo-banner">Free Shipping on Purchase of over Rs. 2000 (Prepaid Orders)</div>
+    <main class="main-content cart-page-main cart-page-shell">
+        <h2 class="section-title cart-title">Your Cart</h2>
+
+        <div id="cartEmpty" class="cart-empty-box" style="display: none;">
+            <p>Your cart is empty. Browse our collections to add items.</p>
+            <a href="products.html?cat=bracelet" class="cart-empty-link">Shop Bracelets</a>
+        </div>
+
+        <div class="cart-layout">
+            <section class="cart-table-wrap" aria-label="Cart items">
+                <div class="cart-table-head">
+                    <span></span>
+                    <span>Product</span>
+                    <span>Price</span>
+                    <span>Quantity</span>
+                    <span>Subtotal</span>
+                </div>
+                <div id="cartItems" class="cart-table-body"></div>
+                <div class="cart-table-footer">
+                    <button type="button" id="updateCartBtn" class="update-cart-btn" disabled>Update Cart</button>
+                </div>
+            </section>
+
+            <aside id="cartCheckoutSection" class="cart-totals-card" style="display: none;">
+                <h3>Cart totals</h3>
+                <div class="totals-row">
+                    <span>Subtotal</span>
+                    <strong id="cartSubtotalValue">Rs 0</strong>
+                </div>
+                <div class="totals-row shipping-row">
+                    <span>Shipping</span>
+                    <p>Shipping options will be updated during checkout.</p>
+                </div>
+                <div class="totals-row total-final">
+                    <span>Total</span>
+                    <strong id="cartTotalValue">Rs 0</strong>
+                </div>
+                <button type="button" id="whatsappOrderBtn" class="checkout-btn" title="Proceed to WhatsApp: +91 95880 16011">
+                    Proceed to Checkout
+                </button>
+            </aside>
+        </div>
+
+        <div class="billing-panel">
+            <h3 class="billing-title">Billing Details</h3>
+            <form id="billingForm" class="billing-form">
+                <label>
+                    <span>Full Name *</span>
+                    <input type="text" name="name" required placeholder="Your name">
+                </label>
+                <label>
+                    <span>Phone Number *</span>
+                    <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" placeholder="your@email.com">
+                </label>
+                <label>
+                    <span>Shipping Address *</span>
+                    <textarea name="address" required rows="3" placeholder="House/Flat no., Street, City, State, Pincode"></textarea>
+                </label>
+            </form>
+            <p class="checkout-hint">Fill your details and proceed to WhatsApp to confirm the order.</p>
+            <div class="billing-total-inline">Order Total: <strong id="checkoutTotalValue">Rs 0</strong></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="service-strip">
+            <article class="service-box">
+                <h3>Speedy Delivery</h3>
+                <p>We ensure express shipping and fast delivery</p>
+            </article>
+            <article class="service-box">
+                <h3>Cash On Delivery</h3>
+                <p>Cash on delivery available all over India</p>
+            </article>
+            <article class="service-box">
+                <h3>Over 10000 Products</h3>
+                <p>India's largest healing crystal store</p>
+            </article>
+        </div>
+
+        <div class="footer-links-grid">
+            <div>
+                <h4>Contact</h4>
+                <p>316, Above Kohinoor Electronics, Kamla Spaces,<br>Near Khira Nagar, S.V. Road,<br><strong>Santacruz (West), Mumbai</strong></p>
+                <p>42, Sidhpura Industrial Estate,<br>Caiwadi, Behind SRL Laboratories,<br>S.V. Road, <strong>Goregaon (West), Mumbai</strong></p>
+            </div>
+            <div>
+                <h4>Connect Us</h4>
+                <p>For Inquiries, Call:<br><strong>+91 99300 00944</strong></p>
+                <p>For Whatsapp:<br><strong>+91 98190 10536</strong></p>
+                <p><strong>info@riddhisiddhistore.com</strong></p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="about.html">About Us</a>
+                <a href="products.html">Our Store</a>
+                <a href="account.html">Account</a>
+                <a href="terms.html">Returns and Refund Policy</a>
+                <a href="privacy.html">Shipping Policy</a>
+            </div>
+            <div>
+                <h4>Top Categories</h4>
+                <a href="products.html?cat=raw-stone">Rough Raw Stone</a>
+                <a href="products.html?cat=chips">Stone Chips</a>
+                <a href="products.html?cat=clusters">Clusters</a>
+                <a href="products.html?cat=palm">Palm Stone</a>
+                <a href="products.html?cat=geodes">Geodes</a>
+            </div>
+            <div>
+                <h4>Top Stones</h4>
+                <a href="products.html?cat=amethyst">Amethyst</a>
+                <a href="products.html?cat=black-tourmaline">Black Tourmaline</a>
+                <a href="products.html?cat=pyrite">Pyrite</a>
+                <a href="products.html?cat=rose-quartz">Rose Quartz</a>
+                <a href="products.html?cat=tiger-eye">Tiger Eye</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <p>Copyright &copy; 2026 Riddhi Siddhi Store. All Rights Reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></a>
+        <a href="search.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Search</span></a>
+        <a href="account.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Account</span></a>
+        <a href="cart.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Cart</span></a>
+    </nav>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

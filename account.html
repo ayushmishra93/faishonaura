@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Riddhi Siddhi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Page Animation -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span>Riddhi</span> <span>Siddhi</span></div>
+        <div class="loader-crystal">
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <button class="menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+        <a href="index.html" class="logo"><span class="logo-shubh">Riddhi</span><span class="logo-anjali"> Siddhi</span></a>
+        <a href="cart.html" class="cart-btn">
+            <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            <span class="cart-badge">0</span>
+        </a>
+    </header>
+    <!-- Navigation drawer (hidden by default) -->
+    <aside class="nav-drawer" id="navDrawer" aria-hidden="true">
+        <nav class="drawer-nav">
+            <a href="products.html" class="drawer-link">Shop</a>
+            <a href="products.html?cat=category" class="drawer-link">By Category</a>
+            <a href="products.html?cat=meaning" class="drawer-link">By Meaning</a>
+            <a href="products.html?cat=crystals" class="drawer-link">By Crystals</a>
+            <a href="products.html?cat=color" class="drawer-link">By Color</a>
+            <a href="products.html?cat=home-decor" class="drawer-link">Home Decor</a>
+            <a href="products.html?cat=jewellery" class="drawer-link">Jewellery</a>
+            <a href="products.html?cat=gifting" class="drawer-link">Gifting</a>
+        </nav>
+    </aside>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="promo-banner">Free Shipping on Purchase of over Rs. 2000 (Prepaid Orders)</div>
+    <main class="main-content" style="padding-top: 24px;">
+        <h2 class="section-title">My Account</h2>
+        <p style="color: var(--text-muted); margin-top: 8px;">Sign in or create an account to track orders and manage your profile.</p>
+        <a href="tel:+919588016011" style="display: block; margin-top: 24px; padding: 12px; background: #f5f5f5; border-radius: 8px;">
+            <strong>Contact us:</strong> +91 95880 16011
+        </a>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-shubh">Riddhi</span><span class="logo-anjali"> Siddhi</span>
+                </div>
+                <div class="footer-tagline">Healing Crystals & Magic</div>
+                <p class="footer-desc">
+                    Connect with a crystal ally for your journey, with Riddhi Siddhi’s personalized guidance and genuine care; embrace life’s abundant possibilities with confidence.
+                </p>
+                <div class="footer-contact">
+                    <div>Rajkot, Gujarat</div>
+                    <div>Phone: (+91) 95880 16011</div>
+                </div>
+            </div>
+
+            <div class="footer-accordions">
+                <div class="footer-accordion">
+                    <button class="footer-accordion-btn" type="button" aria-expanded="false" aria-controls="footer-useful-links">
+                        Useful Links
+                        <svg class="footer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="footer-accordion-panel" id="footer-useful-links" hidden>
+                        <a class="footer-link" href="index.html">Home</a>
+                        <a class="footer-link" href="products.html">Shop</a>
+                        <a class="footer-link" href="cart.html">Cart</a>
+                        <a class="footer-link" href="search.html">Search</a>
+                    </div>
+                </div>
+
+                <div class="footer-accordion">
+                    <button class="footer-accordion-btn" type="button" aria-expanded="false" aria-controls="footer-our-stores">
+                        Our Stores
+                        <svg class="footer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="footer-accordion-panel" id="footer-our-stores" hidden>
+                        <a class="footer-link" href="account.html">Contact & Address</a>
+                        <a class="footer-link" href="https://wa.me/919588016011">WhatsApp Store</a>
+                    </div>
+                </div>
+
+                <div class="footer-accordion">
+                    <button class="footer-accordion-btn" type="button" aria-expanded="false" aria-controls="footer-menu">
+                        Footer Menu
+                        <svg class="footer-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="footer-accordion-panel" id="footer-menu" hidden>
+                        <a class="footer-link" href="account.html">My Account</a>
+                        <a class="footer-link" href="products.html?cat=bracelet">Bracelets</a>
+                        <a class="footer-link" href="products.html?cat=crystals">Crystals</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">© 2026 Riddhi Siddhi. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Home</span></a>
+        <a href="search.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Search</span></a>
+        <a href="account.html" class="nav-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Account</span></a>
+        <a href="cart.html" class="nav-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Cart</span></a>
+    </nav>
+    <script src="js/main.js"></script>
+</body>
+</html>

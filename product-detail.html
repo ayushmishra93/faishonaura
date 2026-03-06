@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - Riddhi Siddhi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-logo"><span>Riddhi</span> <span>Siddhi</span></div>
+        <div class="loader-spinner"></div>
+    </div>
+
+    <div class="promo-banner">Free Shipping on Purchase of over Rs. 2000 (Prepaid Orders)</div>
+
+    <header class="header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-shubh">riddhi</span><span class="logo-anjali">siddhi</span>
+            </a>
+
+            <nav class="header-nav" aria-label="Primary">
+                <ul class="nav-list">
+                    <li><a href="products.html">Shop</a></li>
+                    <li><a href="products.html?cat=category">By Category</a></li>
+                    <li><a href="products.html?cat=meaning">By Meaning</a></li>
+                    <li><a href="products.html?cat=crystals">By Crystals</a></li>
+                    <li><a href="products.html?cat=color">By Color</a></li>
+                    <li><a href="products.html?cat=home-decor">Home Decor</a></li>
+                    <li><a href="products.html?cat=jewellery">Jewellery</a></li>
+                    <li><a href="products.html?cat=gifting">Gifting</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <button class="more-btn" id="moreBtn" aria-label="Open menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="4" y1="7" x2="20" y2="7"></line>
+                        <line x1="4" y1="12" x2="20" y2="12"></line>
+                        <line x1="4" y1="17" x2="20" y2="17"></line>
+                    </svg>
+                </button>
+                <a href="search.html" class="icon-btn" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </a>
+                <a href="cart.html" class="cart-btn" aria-label="Cart">
+                    <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-cat-menu" id="mobileCatMenu" aria-hidden="true">
+        <nav class="mobile-cat-nav">
+            <a href="products.html" class="mobile-cat-link">Shop</a>
+            <a href="products.html?cat=category" class="mobile-cat-link">By Category</a>
+            <a href="products.html?cat=meaning" class="mobile-cat-link">By Meaning</a>
+            <a href="products.html?cat=crystals" class="mobile-cat-link">By Crystals</a>
+            <a href="products.html?cat=color" class="mobile-cat-link">By Color</a>
+            <a href="products.html?cat=home-decor" class="mobile-cat-link">Home Decor</a>
+            <a href="products.html?cat=jewellery" class="mobile-cat-link">Jewellery</a>
+            <a href="products.html?cat=gifting" class="mobile-cat-link">Gifting</a>
+        </nav>
+    </div>
+
+    <section class="page-crumb">
+        <p>Home / <strong id="detailBreadcrumb">Product</strong></p>
+    </section>
+
+    <main class="detail-wrap">
+        <section class="detail-grid">
+            <div class="detail-gallery">
+                <div class="product-detail-img" id="detailMainImage"></div>
+                <div class="detail-thumbs">
+                    <button class="detail-thumb active" type="button" data-variant="base" aria-label="Image 1"></button>
+                    <button class="detail-thumb" type="button" data-variant="dark" aria-label="Image 2"></button>
+                    <button class="detail-thumb" type="button" data-variant="light" aria-label="Image 3"></button>
+                    <button class="detail-thumb" type="button" data-variant="soft" aria-label="Image 4"></button>
+                </div>
+            </div>
+
+            <div class="detail-info">
+                <h1 class="product-detail-name">Product Name</h1>
+                <p class="product-detail-price">Rs 0 - Rs 0</p>
+
+                <p class="detail-desc" id="detailDescription">
+                    Premium natural crystal selected for healing, positivity, and decor use.
+                </p>
+
+                <div class="detail-order-chip">
+                    <span>15 orders placed in last 1 hour</span>
+                </div>
+
+                <div class="detail-payment-card">
+                    <div>
+                        <strong>Pay later available</strong>
+                        <p>Secured checkout support</p>
+                    </div>
+                    <span>View options</span>
+                </div>
+
+                <div class="detail-weights">
+                    <h3>Weight</h3>
+                    <div class="weight-list" id="weightList">
+                        <button type="button" class="weight-btn active" data-weight="20-30gm">20-30gm</button>
+                        <button type="button" class="weight-btn" data-weight="30-40gm">30-40gm</button>
+                        <button type="button" class="weight-btn" data-weight="40-50gm">40-50gm</button>
+                        <button type="button" class="weight-btn disabled" data-weight="50-60gm" disabled>50-60gm</button>
+                    </div>
+                </div>
+
+                <div class="detail-actions">
+                    <div class="qty-box">
+                        <button type="button" id="qtyMinus" aria-label="Decrease quantity">-</button>
+                        <span id="qtyValue">1</span>
+                        <button type="button" id="qtyPlus" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button type="button" class="add-to-cart-btn detail-cart-btn" id="detailAddToCart" data-id="1" data-name="Product Name" data-price="Rs 0 - Rs 0">Add to Cart</button>
+                </div>
+
+                <a href="https://wa.me/919588016011?text=Hi%2C%20I%20am%20interested%20in%20this%20product" class="detail-whatsapp">Order via WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="service-strip">
+            <article class="service-box">
+                <h3>Speedy Delivery</h3>
+                <p>We ensure express shipping and fast delivery</p>
+            </article>
+            <article class="service-box">
+                <h3>Cash On Delivery</h3>
+                <p>Cash on delivery available all over India</p>
+            </article>
+            <article class="service-box">
+                <h3>Over 10000 Products</h3>
+                <p>India's largest healing crystal store</p>
+            </article>
+        </div>
+
+        <div class="footer-bottom-bar">
+            <p>Copyright &copy; 2026 Riddhi Siddhi Store. All Rights Reserved.</p>
+            <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms and Conditions</a></p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919588016011" class="fab fab-whatsapp" aria-label="Chat on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"></path>
+        </svg>
+    </a>
+
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Home</span>
+        </a>
+        <a href="search.html" class="nav-item active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            <span>Account</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span>Cart</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
